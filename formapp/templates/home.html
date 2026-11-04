@@ -1,0 +1,43 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+  <h2 class="text-center mb-4">Students Informations</h2>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover align-middle text-center shadow-sm">
+
+      <thead class="table-dark">
+        <tr>
+          <th>Student ID</th>
+          <th>Student Name</th>
+          <th>Email Address</th>
+          <th>Department</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for data in st_data %}
+          <tr>
+            <td>{{ data.st_id }}</td>
+            <td>{{ data.st_name }}</td>
+            <td>{{ data.st_email }}</td>
+            <td>{{ data.st_dept }}</td>
+            <td>{{ data.st_address }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+
+    </table>
+  </div>
+
+</div>
+
+{% endblock %}

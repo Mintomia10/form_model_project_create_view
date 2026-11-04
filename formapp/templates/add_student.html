@@ -1,0 +1,43 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}
+  Add Student
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h2>Add Student Informations</h2>
+
+    <form method="POST">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Student ID</label>
+        <input type="text" name="s_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <input type="text" name="s_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email" name="s_email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Department</label>
+        <input type="text" name="s_dept" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Address</label>
+        <input type="textarea" name="s_address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Add Student</button>
+    </form>
+  </div>
+
+
+{% endblock %}
